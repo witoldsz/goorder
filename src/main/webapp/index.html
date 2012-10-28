@@ -7,8 +7,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/customizations.css" rel="stylesheet">
   </head>
-  <body>
-    <div class="container">
+  <body ng-app="goorder">
+    <div class="container" ng-controller="OrderGroupsController">
       <div class="row">
         <div class="hero-unit thin">
           <h1>GoOrder.net - easy order list!</h1>
@@ -26,10 +26,9 @@
       </div>
       <div class="row">
         <ul class="nav nav-tabs">
-          <li class="active">
-            <a href="#">Tivoli</a>
+          <li ng-repeat="g in groups" ng-class="{active:isActive(g)}">
+            <a href="#">{{g.name}}</a>
           </li>
-          <li><a href="#">Chinol</a></li>
           <li><a href="#">+</a></li>
         </ul>
       </div>
@@ -122,5 +121,8 @@
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+    <script src="application/main.js"></script>
+    <script src="application/order-groups.js"></script>
   </body>
 </html>
