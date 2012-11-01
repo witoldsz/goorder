@@ -1,0 +1,10 @@
+#edit-address div.render {
+  cursor: pointer;
+  margin: -3px;
+  border-width: 3px;
+  border-style: dashed;
+  border-color: transparent;
+}
+#edit-address div.render:hover {
+  border-color: rgba(82, 168, 236, 0.8);
+}

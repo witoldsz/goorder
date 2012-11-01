@@ -9,8 +9,3 @@
 input.money {
   text-align: right;
 }
-
-
-#address-info:hover {
-  border: 1px solid rgba(82, 168, 236, 0.8);
-}

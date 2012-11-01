@@ -6,6 +6,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/customizations.css" rel="stylesheet">
+    <link href="application/edit-address.css" rel="stylesheet">
   </head>
   <body ng-app="goorder">
     <div class="container" ng-controller="OrderGroupsController">
@@ -34,15 +35,17 @@
           </ul>
         </div>
         <div class="row">
-          <address class="span6" ng-controller="AddressEditController" go-edit-address>
-            <div class="render" id="address-info"></div>
-            <textarea rows="5" class="span6" ng-model="address">
-              Ordering place
-              http://
-              phone:
-              menu: http://
-            </textarea>
-          </address>
+          <div class="span6" id="edit-address">
+            <address ng-controller="AddressEditController" go-edit-address>
+              <div class="render"></div>
+              <textarea rows="5" class="span6" ng-model="address">
+                Ordering place
+                http://
+                phone:
+                menu: http://
+              </textarea>
+            </address>
+          </div>
           <div class="span6">
             <div>
               Order at: <strong>12:30</strong>
