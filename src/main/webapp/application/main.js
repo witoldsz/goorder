@@ -1,1 +1,1 @@
-angular.module('goorder', ['order-groups']);
+angular.module('goorder', ['order-groups','edit-address']);
