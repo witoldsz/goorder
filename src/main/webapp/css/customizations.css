@@ -1,3 +1,7 @@
+.ng-cloak {
+  display: none;
+}
+
 .hero-unit.thin {
   padding: 30px;
 }
