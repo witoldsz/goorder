@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.catalina.websocket.MessageInbound;
 import org.apache.catalina.websocket.StreamInbound;
 import org.apache.catalina.websocket.WebSocketServlet;
+import org.apache.catalina.websocket.WsOutbound;
 
 /**
  *
@@ -22,6 +23,11 @@ public class TestWebSocket extends WebSocketServlet {
             {
                 System.out.println("Creating connection " + this.hashCode());
                 
+            }
+
+            @Override
+            protected void onOpen(WsOutbound outbound) {
+                super.onOpen(outbound);
             }
 
             @Override
