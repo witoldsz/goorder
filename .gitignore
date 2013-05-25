@@ -1,5 +1,9 @@
 nb-configuration.xml
 nbactions.xml
 
+/scripts/scripts-env.local.sh
+goorder.properties
+
 /target/
 /goorder-app/target/
+/goorder-db/target/

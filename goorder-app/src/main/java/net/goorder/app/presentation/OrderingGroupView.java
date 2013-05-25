@@ -8,7 +8,7 @@ import net.goorder.app.domain.*;
  * @author witoldsz
  */
 @Data
-public class OrderGroupView {
+public class OrderingGroupView {
 
     private String id;
 

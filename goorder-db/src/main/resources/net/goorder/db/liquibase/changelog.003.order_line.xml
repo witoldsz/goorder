@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+  <changeSet author="witoldsz" id="2013-05-24-3">
+
+    <createTable tableName="order_line">
+       <column name="id" type="BIGINT">
+        <constraints primaryKey="true" primaryKeyName="PK__order_line"/>
+      </column>
+       <column name="ordering_table" type="BIGINT">
+        <constraints foreignKeyName="FK__order_line_table" references="ordering_table(id)"/>
+      </column>
+      <column name="who" type="VARCHAR(50)"/>
+      <column name="what" type="VARCHAR(150)"/>
+      <column name="price" type="INTEGER"/>
+      <column name="paid" type="INTEGER"/>
+    </createTable>
+
+  </changeSet>
+</databaseChangeLog>

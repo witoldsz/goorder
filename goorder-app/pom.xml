@@ -15,11 +15,27 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
+  <properties>
+    <goorder-root.dir>${project.basedir}/..</goorder-root.dir>
+  </properties>
+
   <dependencies>
+    <dependency>
+      <groupId>goorder</groupId>
+      <artifactId>db</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
     <dependency>
       <groupId>org.apache.openejb</groupId>
       <artifactId>javaee-api</artifactId>
       <version>6.0-5</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <!-- GF 3.1.2 provides jackson 1.9.2 -->
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-jaxrs</artifactId>
+      <version>1.9.2</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+  <changeSet author="witoldsz" id="2013-05-24-2">
+
+    <createTable tableName="ordering_table">
+       <column name="id" type="BIGINT">
+        <constraints primaryKey="true" primaryKeyName="PK__ordering_table"/>
+      </column>
+      <column name="group_id" type="CHAR(8)"/>
+      <column name="label" type="VARCHAR(64)"/>
+      <column name="place" type="CLOB"/>
+      <column name="comments" type="CLOB"/>
+      <column name="deadline" type="TIMESTAMP"/>
+    </createTable>
+
+  </changeSet>
+</databaseChangeLog>
